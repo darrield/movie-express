@@ -14,3 +14,5 @@ const database = async() => {
         process.exit(1);
     }
 }
+
+export default database

@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "fd53258d-d9d7-40f7-a956-2e565fec1734",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49380663",
+		"_collection_link": "https://darrieldapples-9584417.postman.co/workspace/Darriel-Dapples's-Workspace~46eac4bb-961f-4547-8df4-0c6d6b9a7510/collection/49380663-fd53258d-d9d7-40f7-a956-2e565fec1734?action=share&source=collection_link&creator=49380663"
+	},
+	"item": [
+		{
+			"name": "buat movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"judul\": \"Inception\",\r\n  \"tahunRilis\": \"2010\",\r\n  \"sutradara\": \"Christopher Nolan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"test\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"darriel\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"test\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"darriel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movie/68fefb6517bdcd0a3b28676b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"68fefb6517bdcd0a3b28676b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
