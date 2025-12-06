@@ -9,15 +9,10 @@ api.post("/signin", UserController.signIn)
 api.post("/signup", UserController.signUp)
 
 
-api.get("/movie", movieController.movies)
-api.post("/movie", movieController.addNewMovie)
-api.put("/movie/:id", movieController.updateMovie)
-api.delete("/movie/:id", movieController.deleteMovie)
-
-api.get("/movies", authenticateTokenMiddleware, movieController.movies);
-api.get("/movies/:id", authenticateTokenMiddleware, movieController.detailMovie);
-api.post("/movies", authenticateTokenMiddleware, movieController.addNewMovie);
-api.put("/movies/:id", authenticateTokenMiddleware, movieController.updateMovie);
-api.delete("/movies/:id", authenticateTokenMiddleware, movieController.deleteMovie);
+api.get("/movie", authenticateTokenMiddleware, movieController.movies);
+api.get("/movie/:id", authenticateTokenMiddleware, movieController.detailMovie);
+api.post("/movie", authenticateTokenMiddleware, movieController.addNewMovie);
+api.put("/movie/:id", authenticateTokenMiddleware, movieController.updateMovie);
+api.delete("/movie/:id", authenticateTokenMiddleware, movieController.deleteMovie);
 
 export default api
